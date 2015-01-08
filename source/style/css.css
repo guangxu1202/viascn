@@ -1,0 +1,202 @@
+@charset "utf-8";
+/*** Reset ***/
+	html {}
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {margin:0;padding:0;}
+	table {border-collapse:collapse;border-spacing:0;}
+	fieldset,img {border:0;}
+	address,caption,cite,code,dfn,em,strong,th,var,optgroup {/*font-style:inherit;*/font-style:normal;/*font-weight:inherit;*/font-weight:400;}
+	del,ins {text-decoration:none;}
+	li {list-style:none;}
+	caption,th {text-align:left;}
+	h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+	q:before,q:after {content:'';} 
+	abbr,acronym {border:0;font-variant:normal;}
+	sup {vertical-align:baseline;} 
+	sub {vertical-align:baseline;}
+	/*because legend doesn't inherit in IE */
+	legend {color:#000;}
+	input,button,textarea,select,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+	/*@purpose To enable resizing for IE */
+	/*@branch For IE6-Win, IE7-Win */
+	input,button,textarea,select {*font-size:100%;}
+/*** Generic Classes ***/
+	select {font-size:12px;*font-size:11px; color:#9e9e9e;}
+	legend,caption {display:none;}
+	.clear {clear:both;font-size:0;height:0;overflow:hidden;visibility:hidden;}
+/*** Basic ***/
+
+	a:link {color:#d5d5d5;text-decoration:none;}
+	a:visited {color:#d5d5d5;text-decoration:none;}
+	a:hover {color:#fff;text-decoration:underline;}
+	a:active {color:#d5d5d5;text-decoration:none;}
+
+/*** Basic Layout ***/
+html{background:url(img/ui_all_bg.png) repeat-y center #1d1d1d; font-size:14px; color:#d5d5d5;}
+.warpBody{ background:url(img/ui_header_bg.png) no-repeat top center ; height:auto !important; min-height:495px; height:495px;} 
+.bodyWarp{ background:url(img/ui_html_bg.png) repeat-x top;}
+
+.navigation,.warp,.frLink,.footer{ width:1000px; margin:0 auto;}
+.warp{ margin-bottom:30px;}
+.frLink{ line-height:24px; padding:0px 30px; width:940px;}
+/*navigation*/
+.navigation{ text-align:center; padding-top:173px; line-height:30px; padding-bottom:50px;}
+.navigation ul li{  font-weight:700; display:inline; padding:0px 5px;}
+.navigation ul li a:link,.navigation ul li a:visited{ color:#fff;}
+.navigation ul li a:hover{ color:#cc0000;}
+/*list*/
+.list,#pagelist{ padding:10px 0px; text-align:right;}
+#pagelist .selected {font-weight:600; color:#fff;}
+
+/*box*/
+.box{}
+.box .title{ height:31px;padding-left:50px; border-bottom:1px solid #000; position:relative;}
+	.box .title img{ float:left;}
+	.box .title a{ float:right; font-family:arial; font-size:9px; margin-top:15px; font-weight:700; margin-right:6px;}
+	.box .title em{ background:url(img/studio.gif) no-repeat left bottom; display:inline-block; zoom:1; width:50px; height:25px;position:absolute; left:-7px; top:7px;}
+.box .ibody{}
+	.message .ibody ul { margin:15px 10px 0px;}
+	.message .ibody ul li{ background:url(img/ui_point.gif) no-repeat 5px center; padding-left:20px; line-height:30px; border-bottom:1px dotted #8e8e8e;}
+	.message .ibody ul li em{ float:right;}
+	
+.box .ibox{ padding-top:20px; height:auto !important; min-height:400px; height:400px; background:url(img/ui_imovie_bg.gif) no-repeat right bottom;}
+.box .par{ line-height:30px;}
+	.box .par p{ padding:10px 10px;}
+	/*hole*/
+	.hole{ margin:0px 30px;}
+/*message*/
+.message{ width:350px; float:right; display:inline; margin-right:30px;}
+
+
+/*banner*/
+.indexBanner{ float:left; display:inline; margin-left:30px;}
+.ibanner{ width:1000px; height:215px; background:url(img/ui_ibanner_bg.png) no-repeat; margin:0 auto; margin-top:-20px; margin-bottom:20px;}
+	.ibanner img{ margin-top:8px; margin-left:33px;}
+/*quee*/
+.quee{ position:relative;}
+	.turnLeft,.turnRight{ position:absolute; width:53px; height:97px; top:55px; border:none; cursor:pointer;}
+	.turnLeft{ left:10px; background:url(img/btn_turnLeft.gif) no-repeat;}
+	.turnRight{ right:10px; background:url(img/btn_turnRight.gif) no-repeat;}
+
+	.queeWarp{ overflow:hidden; height:210px; width:940px; margin:30px auto;  }
+	
+	.queeWarp ul li{ width:298px; height:167px; padding:11px; float:left; display:inline; padding-top:9px; padding-left:9px; margin-left:9px; border:2px solid #000; background-color:#fff;}
+	.queeWarp ul li img{ width:298px; height:167px;}
+	/*图片滚动*/
+#demo { overflow:hidden;  }
+    #indemo { float: left;width: 1800%;}
+    #demo1 {float: left; }
+    #demo2 {float: left;}
+
+/*footer*/
+.footerWarp{ background:url(img/ui_footWarp_bg.gif) repeat-x bottom;}
+	.footer{ height:67px; background:url(img/ui_bottom_bg.png) no-repeat bottom;}
+	.footer p{ line-height:24px; text-align:center; padding-top:33px;}
+
+
+
+/*inner page style group*/
+.box .iprice{ padding:0px 0px 20px 10px; width:698px;}
+.priceList{ background-color:#fff; border:2px solid #504d4d; color:#383838; padding-right:210px; height:125px; margin-bottom:25px; position:relative;}
+.hotList{border:2px solid #ff4949;}
+	.shwoDet{ position:absolute; right:20px; top:0px; width:170px; height:58px; display:inline; cursor:pointer; border:none; background:url(img/btn_showDet_bg.gif) no-repeat; margin-top:30px;}
+	.priceList dl{font-size:12px; padding:10px 0 0 10px;}
+	.priceList dl dt{ border-bottom:1px solid #b4b4b4;  line-height:24px; margin-bottom:6px;}
+	.priceList dl dt em{ color:#cc0000; font-weight:700;}
+	.priceList dl dt strong{ font-weight:700; color:#000; font-size:14px;}
+	.priceList dl dd{ line-height:22px; padding-left:15px; background:url(img/ui_point.gif) no-repeat 5px 8px;}
+	.priceList a:link,.priceList a:visited{ color:#333;}
+	.priceList a:hover{ color:#000;}
+
+.idetail{ line-height:20px;}
+	.idetail h1{ background-color:#212020; color:#fff; border:1px solid #fff; height:36px; width:550px; margin:10px auto 0px; text-align:center; font-weight:700; line-height:36px; margin-bottom:20px;}
+	.idetail strong{ font-weight:700; display:block;}
+	.idetail p{ padding:20px 0px;}
+	
+.newsList{}
+	.newsList ul li{ background:url(img/ui_point.gif) no-repeat 5px center; padding-left:20px; line-height:30px; border-bottom:1px dotted #8e8e8e;}
+	.newsList ul li em{ float:right; margin-right:6px;}
+
+.works{ padding-left:232px; padding-bottom:20px; position:relative;}
+	.works .worksNav{ float:left; margin-left:-232px; width:230px; display:inline; border:1px solid #d1d1d1; height:auto !important; min-height:450px; height:450px; background-color:#fff;}
+	.worksNav ul{ margin:15px;}
+	.worksNav ul li{ color:#d1d1d1; font-weight:700; border-bottom:1px solid #d1d1d1; padding-top:15px; line-height:30px;}
+	.worksNav ul li span{ font-family:arial; font-size:30px; margin-right:10px;}
+	.worksNav ul li.selected span{ margin-left:20px; color:#6a6a6a;}
+	.worksNav ul li a:link,.worksNav ul li a:visited{ color:#2b2b2b; }
+	.worksList{ width:708px;  float:right;}
+	.worksList .iworks{ width:302px; height:240px; background:url(img/ui_photo_bg.gif) no-repeat 265px 230px #fff; padding:14px; border:1px solid #8a8a8a; float:left; display:inline; margin-left:15px; margin-bottom:15px;}
+	.worksList .iworks img{ border:1px solid #c3c3c3; cursor:pointer; width:298px; height:167px;}
+	.worksList .iworks h6{ color:#000; background:url(img/ui_works_title_bg.gif) no-repeat 5px center;font-weight:700; padding:10px 0px 10px 15px; line-height:20px;}
+	.worksList .iworks h6 a:link,.worksList .iworks h6 a:visited{ color:#000;}
+	.worksList .iworks dl{ line-height:13px; width:88px;}
+	.worksList .iworks dt{ float:left; width:8px; height:26px; background-color:#d2d2d2;}
+	.worksList .iworks dd{ width:80px; float:left; font-size:10px; text-align:center;}
+	.worksList .iworks dd.sendDate{ color:#7e7e7e;}
+
+	.worksDetail{ padding:0px 30px;}
+	.worksDetail h1{ text-align:center; border-bottom:1px solid #808080; line-height:30px; font-weight:700;}
+		.detMessage{ color:#626262; line-height:22px; padding:0px 6px;}
+		.detMessage span{ float:right;}
+		.detMessage em{ color:#b4b4b4;}
+		
+		.detContent{ padding:20px 0px;}
+
+/*msgbox*/
+.MPtabs{ padding-left:20px; border-bottom:2px solid #000; margin-bottom:10px;}
+		.MPtabs ul li{ float:left; margin-right:3px; height:24px; overflow:hidden; line-height:24px; padding:0px 10px; color:#036531; cursor:pointer;}
+		.MPtabs ul li a:link,.MPtabs ul li a:visited{ color:#036531;}
+		.MPtabs ul li.checked{ font-weight:700; background-color:#000;color:#fff;}
+		.MPtabs ul li.checked a:link,.MPtabs ul li.checked a:visited{color:#fff; }
+.msglist { margin:0px 20px; line-height:18px;}
+	 .msglist ul {list-style:none; margin:0; padding:0; font-size:12px;}
+	 .msglist ul li{ background-color:#fff; margin-bottom:5px;}
+	 .msglist p{ padding:5px 0;}
+	 .msglist .title {background:#eee; font-size:12px;  font-weight:600; color:#036; padding-left:10px; height:20px;}
+	 .box .msglist .title{ border-bottom:1px solid #ccc;}
+	 .msglist .content{ color:#000; padding:10px; line-height:18px;}
+	 .msglist span {float:none; margin-left:10px;}
+	 .msglist .reply {border:1px #CCC solid; color:#F22; padding:3px 10px; background-color:#f2f2f2; margin:0px 10px;}
+	 .msglist .manager{ border-bottom:1px solid #ccc; padding:2px 5px;}
+	 .msglist .bc{ height:10px;}
+	 .msglist .reply p{ padding:0px; line-height:18px;}
+
+	 
+	 
+
+#contactform { margin:0; padding:5px;}
+#contactform * { font-family: Arial, Helvetica, sans-serif;; font-size:12px;}
+#contactform ol { margin:0; padding:0; list-style:none;}
+#contactform li { margin:0 0 5px 0; padding:10px; background:none;}
+#contactform li.buttons { margin:0; overflow:hidden;}
+#contactform label { margin:0; width:140px; display:block; float:left; text-align:right; padding:0 15px 2px 0; font:normal 14px Arial, Helvetica, sans-serif; color:#fff;}
+#contactform label span { font:normal 11px Arial, Helvetica, sans-serif; color:#afafaf; margin:0; padding:0;}
+#contactform input.text { width:280px; border:1px solid #d6d6d6; margin:0; padding:5px 2px; height:16px; background:#fff;}
+#contactform textarea { width:280px; border:1px solid #d6d6d6; padding:2px; background:#fff;}
+#contactform li.buttons input { padding:3px 10px; margin:0 0 0 155px; background:#f2f2f2; border:1px solid #333; color:#FFF; float:left;}
+#contactform .red{ color:#cc0000; padding-left:3px;}
+
+
+/* Screen List */
+.indexBanner{ position:relative;}
+div.screen_list { width:676px; float:left; position:relative;}
+div.screen_images { background:url(images/screen_bg.gif) no-repeat top; width:569px; height:240px; position:relative;}
+div.screen_images img {position:absolute;}
+div.screen_scroll{ position:absolute; right:10px;_right:0px; top:200px;}
+div.screen_scroll ul { list-style:none; margin:6px; padding:0; float:left;}
+div.screen_scroll ul li { margin:3px; padding:0; float:left;}
+div.screen_scroll ul li a { float:left; font:normal 12px Arial, Helvetica, sans-serif;padding:1px 5px;color:#fff;background:#1d1a21; border:1px solid #7e7976;}
+div.screen_scroll ul li a:link{ background:#1d1a21;}
+div.screen_scroll ul li a.current { background:#cc0000; color:#fff; border:1px solid #fb8c81; }
+div.screen_scroll ul li a:hover { text-decoration:underline;}
+div.screen_scroll ul li a:visited{ color:#fff;}
+
+
+/*QQ*/
+.QQwarp{ width:100px; padding:10px; background-color:#000; border:1px solid #999; position:fixed; right:0px; top:200px;_position:absolute; z-index:9999;}
+.QQlist{ background-color:#fff; padding:10px 0px; text-align:center; height:auto !important; min-height:100px; height:100px;}
+.QQhead{ position:relative; width:100%; height:32px; }
+.QQclose{ position:absolute; right:-3px; top:-3px; z-index:999;border:none; width:7px; height:7px; background:url(img/qq_close.gif) no-repeat; cursor:pointer;}
+	
+	
+	
+	
